@@ -14,7 +14,7 @@ public class HaveWeaponContent : MonoBehaviour
     bool isSelect;
     public Action<int> EquipBtnActive;
     public Action<int> EquipWeapon;
-    int curId = -1;
+    int curId = 0;
     int prevId = 0;
 
     private void Start()
@@ -43,18 +43,31 @@ public class HaveWeaponContent : MonoBehaviour
         //이전에 누른 장비 버튼은 비활성화 되도록 함
         prevId = curId;
         curId = id;
-        transform.GetChild(curId).GetComponent<HaveWeaponBtn>().ClickPanel(true);
+        if (prevId == curId && prevId != 0)
+        {
+            prevId--;
+        }
+        else if(prevId == curId && prevId == 0)
+        {
+            prevId++;
+        }
+        Debug.Log(prevId);
+        Debug.Log(curId);
+        //transform.GetChild(curId).GetComponent<HaveWeaponBtn>().ClickPanel(true);
         transform.GetChild(prevId).GetComponent<HaveWeaponBtn>().ClickPanel(false);
+        transform.GetChild(prevId).GetComponent<HaveWeaponBtn>().isOpen = false;
     }
 
     void ClickEquipBtn(int id)
     {
+        SoundManager.instance.WeaponBtnClickSound();
         if (transform.GetChild(id).GetComponent<HaveWeaponBtn>().isEquip) return;
         upperPanel.EquipGun(guns[id], id);
     }
 
     public void DeEquipWeapon(int id)
     {
+        SoundManager.instance.DeEquipWeaponSound();
         transform.GetChild(id).GetComponent<HaveWeaponBtn>().isEquip = false;
     }
 }

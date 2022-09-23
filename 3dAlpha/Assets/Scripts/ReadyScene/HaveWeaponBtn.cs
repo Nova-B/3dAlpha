@@ -11,6 +11,7 @@ public class HaveWeaponBtn : MonoBehaviour, IPointerDownHandler
     GameObject clickPanel;
     GameObject equipBtn;
     public Gun gun;
+    public bool isOpen = false;
 
 
     private void Start()
@@ -29,13 +30,17 @@ public class HaveWeaponBtn : MonoBehaviour, IPointerDownHandler
     {
         /*isClick = !isClick;
         clickPanel.SetActive(isClick);*/
+        SoundManager.instance.OpenUISound();
         if(transform.parent.gameObject.GetComponent<HaveWeaponContent>() != null)
         {
             transform.parent.gameObject.GetComponent<HaveWeaponContent>().EquipBtnActive(id);
         }
+        isOpen = !isOpen;
+        clickPanel.SetActive(isOpen);
     }
     public void ClickPanel(bool condition)
     {
         clickPanel.SetActive(condition);
+        //isOpen = condition;
     }
 }

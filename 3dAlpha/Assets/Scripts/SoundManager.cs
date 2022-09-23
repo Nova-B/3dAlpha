@@ -22,6 +22,8 @@ public class SoundManager : MonoBehaviour
 
     [Header("Click")]
     [SerializeField] AudioClip weaonBtnClickClip;
+    [SerializeField] AudioClip deWeaonBtnClickClip;
+    [SerializeField] AudioClip openUIClickClip;
 
     [Header("Elevator")]
     [SerializeField] AudioClip startEleLiftUpClip;
@@ -132,6 +134,16 @@ public class SoundManager : MonoBehaviour
     public void WeaponBtnClickSound()
     {
         SFXPlay("WeaponClick", weaonBtnClickClip);
+    }
+
+    public void DeEquipWeaponSound()
+    {
+        SFXPlay("DeWeapon", deWeaonBtnClickClip);
+    }
+
+    public void OpenUISound()
+    {
+        SFXPlay("OpenUI", openUIClickClip);
     }
 
     public void StartEleLiftUpSound()

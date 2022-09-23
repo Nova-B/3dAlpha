@@ -135,7 +135,6 @@ public class PlayerShooter : MonoBehaviour
                     IDamageble target = hit.collider.gameObject.GetComponent<IDamageble>();
                     if (target != null)
                     {
-                        Debug.Log("fire");
                         timer += Time.deltaTime;
                         if (timer > gun.fireInterval && gun.curAmmo > 0)
                         {

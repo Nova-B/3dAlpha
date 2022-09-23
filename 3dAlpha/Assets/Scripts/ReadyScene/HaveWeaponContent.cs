@@ -51,9 +51,6 @@ public class HaveWeaponContent : MonoBehaviour
         {
             prevId++;
         }
-        Debug.Log(prevId);
-        Debug.Log(curId);
-        //transform.GetChild(curId).GetComponent<HaveWeaponBtn>().ClickPanel(true);
         transform.GetChild(prevId).GetComponent<HaveWeaponBtn>().ClickPanel(false);
         transform.GetChild(prevId).GetComponent<HaveWeaponBtn>().isOpen = false;
     }

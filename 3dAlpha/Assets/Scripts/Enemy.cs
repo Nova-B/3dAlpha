@@ -55,7 +55,6 @@ public class Enemy : LivingEntity, IDamageble
         if(targetPlayer == null)
         {
             targetPlayer = FindObjectOfType<PlayerShooter>().gameObject.transform;
-            Debug.Log("»Æ¿Œ");
         }
         isTargetingImageObj.SetActive(false);
         isNormalAciton = true;

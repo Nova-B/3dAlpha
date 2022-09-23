@@ -114,6 +114,7 @@ public class UpperPanel : MonoBehaviour
     public void ClickPlayBtn()
     {
         EquipWeaponData.instance.Save(guns);
+        //DataManager.instance.Save(guns);
         SceneManager.LoadScene(1);
     }
 }

@@ -32,7 +32,7 @@ public class WeaponBtnTouch : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     public void OnPointerUp(PointerEventData eventData)
     {
         StopCoroutine("CalculateTouchTime");
-        if(touchTime < minTouchTimeforReloading)
+        if(touchTime < minTouchTimeforReloading && id < EquipWeaponData.instance.equipGun.Count)
         {
             UIManager.Instance.WeaponBtnUpandDownAnim(id);
             UIManager.Instance.itemSet(id);

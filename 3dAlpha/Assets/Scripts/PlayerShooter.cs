@@ -51,7 +51,6 @@ public class PlayerShooter : MonoBehaviour
             //weapons[i].SetActive(false);
             if (weapons[i].GetComponent<MeshRenderer>() != null)
             {
-                Debug.Log("Yes");
                 weapons[i].GetComponent<MeshRenderer>().enabled = false;
             }
         }
@@ -59,6 +58,11 @@ public class PlayerShooter : MonoBehaviour
 
     public Gun ThrowGunInfo(int id)
     {
+        if (EquipWeaponData.instance.equipGun.Count <= id)
+        {
+            Gun gun = new Gun();
+            return gun;
+        }
         return weapons[id].GetComponent<Gun>();
     }
 
@@ -130,8 +134,6 @@ public class PlayerShooter : MonoBehaviour
 
                 if (Physics.Raycast(transform.position, dir, out hit, gun.fireDistance, targetLayer))
                 {
-                    Debug.Log(hit.collider.gameObject.name);
-
                     IDamageble target = hit.collider.gameObject.GetComponent<IDamageble>();
                     if (target != null)
                     {

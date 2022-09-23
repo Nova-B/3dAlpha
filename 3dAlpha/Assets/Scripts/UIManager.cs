@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System;
 using TMPro;
@@ -15,7 +16,10 @@ public class UIManager : MonoBehaviour
     float weaponMinTouchTimeforReload = 1.5f;
 
     public Action<int> itemSet;
-    public Func<int, Gun> getGunInfo; 
+    public Func<int, Gun> getGunInfo;
+
+    //pause
+    [SerializeField] GameObject pausePanel;
 
     public static UIManager Instance
     {
@@ -41,8 +45,10 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         startAmmoSetUp();
+        pausePanel.SetActive(false);
     }
 
+    #region Setting
     void ClickWeaponSetUp()
     {
         for (int i = 0; i < Weapons.Length; i++) //버튼 애니메이션 할당
@@ -69,9 +75,15 @@ public class UIManager : MonoBehaviour
                 Weapons[i].transform.GetChild(2).GetComponent<Slider>().value = getGunInfo(i).ammoCapacity;
                 Weapons[i].transform.GetChild(2).transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "" + getGunInfo(i).ammoCapacity;
             }
+            else
+            {
+                Weapons[i].transform.GetChild(1).GetComponent<Image>().enabled = false;
+            }
         }
     }
+    #endregion
 
+    #region WeaponUI
     public void ShowCurAmmo(int id)//playershooter에서 사용됨. shot을 해서 gun 함수로부터 ammo가 -된 이후 남은 총알 UI를 표시하기 위한 함수
     {
         Weapons[id].transform.GetChild(2).transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "" + getGunInfo(id).curAmmo;
@@ -93,4 +105,26 @@ public class UIManager : MonoBehaviour
             weaponBtnisUp[i] = false;
         }
     }
+    #endregion
+
+    #region PauseUI
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
+    }
+
+    public void Continue()
+    {
+        Time.timeScale = 1f;
+        pausePanel.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        EquipWeaponData.instance.equipGun.Clear();
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+    }
+    #endregion
 }

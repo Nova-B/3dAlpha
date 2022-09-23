@@ -1,0 +1,977 @@
+fileFormatVersion: 2
+guid: ab78697ff2c410d44b6317913e52e07c
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Cyborg Ninja
+  - first:
+      1: 100004
+    second: Cyborg Ninja Gun
+  - first:
+      1: 100006
+    second: Head
+  - first:
+      1: 100008
+    second: L-finger01
+  - first:
+      1: 100010
+    second: L-finger02
+  - first:
+      1: 100012
+    second: L-foot
+  - first:
+      1: 100014
+    second: L-hand
+  - first:
+      1: 100016
+    second: L-HandControl
+  - first:
+      1: 100018
+    second: L-knee
+  - first:
+      1: 100020
+    second: L-LegControl
+  - first:
+      1: 100022
+    second: L-lowerarm
+  - first:
+      1: 100024
+    second: L-thigh
+  - first:
+      1: 100026
+    second: L-thumb01
+  - first:
+      1: 100028
+    second: L-thumb02
+  - first:
+      1: 100030
+    second: L-upperarm
+  - first:
+      1: 100032
+    second: Main
+  - first:
+      1: 100034
+    second: Pelvis
+  - first:
+      1: 100036
+    second: R-finger01
+  - first:
+      1: 100038
+    second: R-finger02
+  - first:
+      1: 100040
+    second: R-foot
+  - first:
+      1: 100042
+    second: R-hand
+  - first:
+      1: 100044
+    second: R-HandControl
+  - first:
+      1: 100046
+    second: R-knee
+  - first:
+      1: 100048
+    second: R-LegControl
+  - first:
+      1: 100050
+    second: R-lowerarm
+  - first:
+      1: 100052
+    second: R-thigh
+  - first:
+      1: 100054
+    second: R-thumb01
+  - first:
+      1: 100056
+    second: R-thumb02
+  - first:
+      1: 100058
+    second: R-upperarm
+  - first:
+      1: 100060
+    second: Shoulder
+  - first:
+      1: 100062
+    second: Spine
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Cyborg Ninja
+  - first:
+      4: 400004
+    second: Cyborg Ninja Gun
+  - first:
+      4: 400006
+    second: Head
+  - first:
+      4: 400008
+    second: L-finger01
+  - first:
+      4: 400010
+    second: L-finger02
+  - first:
+      4: 400012
+    second: L-foot
+  - first:
+      4: 400014
+    second: L-hand
+  - first:
+      4: 400016
+    second: L-HandControl
+  - first:
+      4: 400018
+    second: L-knee
+  - first:
+      4: 400020
+    second: L-LegControl
+  - first:
+      4: 400022
+    second: L-lowerarm
+  - first:
+      4: 400024
+    second: L-thigh
+  - first:
+      4: 400026
+    second: L-thumb01
+  - first:
+      4: 400028
+    second: L-thumb02
+  - first:
+      4: 400030
+    second: L-upperarm
+  - first:
+      4: 400032
+    second: Main
+  - first:
+      4: 400034
+    second: Pelvis
+  - first:
+      4: 400036
+    second: R-finger01
+  - first:
+      4: 400038
+    second: R-finger02
+  - first:
+      4: 400040
+    second: R-foot
+  - first:
+      4: 400042
+    second: R-hand
+  - first:
+      4: 400044
+    second: R-HandControl
+  - first:
+      4: 400046
+    second: R-knee
+  - first:
+      4: 400048
+    second: R-LegControl
+  - first:
+      4: 400050
+    second: R-lowerarm
+  - first:
+      4: 400052
+    second: R-thigh
+  - first:
+      4: 400054
+    second: R-thumb01
+  - first:
+      4: 400056
+    second: R-thumb02
+  - first:
+      4: 400058
+    second: R-upperarm
+  - first:
+      4: 400060
+    second: Shoulder
+  - first:
+      4: 400062
+    second: Spine
+  - first:
+      23: 2300000
+    second: Cyborg Ninja Gun
+  - first:
+      33: 3300000
+    second: Cyborg Ninja Gun
+  - first:
+      43: 4300000
+    second: Cyborg Ninja Gun
+  - first:
+      43: 4300002
+    second: Cyborg Ninja
+  - first:
+      74: 7400000
+    second: troop_idle
+  - first:
+      74: 7400002
+    second: ninja_damage
+  - first:
+      74: 7400004
+    second: ninja_death
+  - first:
+      74: 7400006
+    second: ninja_run
+  - first:
+      74: 7400008
+    second: ninja_runSlash_1
+  - first:
+      74: 7400010
+    second: ninja_runSlash_2
+  - first:
+      74: 7400012
+    second: ninja_standSlash_1
+  - first:
+      74: 7400014
+    second: ninja_standSlash_2
+  - first:
+      74: 7400016
+    second: ninja_roll
+  - first:
+      74: 7400018
+    second: troop_damage
+  - first:
+      74: 7400020
+    second: troop_death
+  - first:
+      74: 7400022
+    second: troop_run
+  - first:
+      74: 7400024
+    second: troop_runShot
+  - first:
+      74: 7400026
+    second: troop_runRapidFire
+  - first:
+      74: 7400028
+    second: troop_standShot
+  - first:
+      74: 7400030
+    second: troop_standRapidFire
+  - first:
+      74: 7400032
+    second: troop_roll
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Cyborg Ninja
+  externalObjects: {}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Shoulder' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: troop_idle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 10
+      lastFrame: 50
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: troop_damage
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 51
+      lastFrame: 65
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: troop_death
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 71
+      lastFrame: 105
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: troop_run
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 112
+      lastFrame: 130
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: troop_runShot
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 132
+      lastFrame: 150
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: troop_runRapidFire
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 152
+      lastFrame: 170
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: troop_standShot
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 171
+      lastFrame: 185
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: troop_standRapidFire
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 191
+      lastFrame: 200
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: troop_roll
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 203
+      lastFrame: 240
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-knee
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-knee
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-upperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-upperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-lowerarm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-lowerarm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-thumb01
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-thumb02
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-finger01
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L-finger02
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-thumb01
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-thumb02
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-finger01
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R-finger02
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Assault Troop(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Main
+      parentName: Assault Troop(Clone)
+      position: {x: -0, y: 0.4618083, z: 0.000000020186283}
+      rotation: {x: 0.00000006657903, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pelvis
+      parentName: Main
+      position: {x: -0, y: -0.07146377, z: 0}
+      rotation: {x: 0.000002174503, y: -0.0000022699915, z: -0.7124431, w: 0.70172995}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: R-thigh
+      parentName: Pelvis
+      position: {x: -0.035644494, y: 0.14745536, z: -0.004317856}
+      rotation: {x: -0.013687675, y: 0.70697665, z: 0.7070982, w: 0.0029752085}
+      scale: {x: 1.0000004, y: 0.99999994, z: 1.0000001}
+    - name: R-knee
+      parentName: R-thigh
+      position: {x: -0.20157689, y: -0.000000020861625, z: 0.000000019073486}
+      rotation: {x: 3.5581965e-10, y: -0.000000039429057, z: 0.009017821, w: 0.99995935}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: R-foot
+      parentName: R-knee
+      position: {x: -0.17205587, y: -0.000000029802322, z: 0.000000009536743}
+      rotation: {x: -0.000000014948482, y: -0.000000015162009, z: -0.7020747, w: 0.7121033}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Spine
+      parentName: Pelvis
+      position: {x: -0.0887426, y: -0.000000029802322, z: 9.937775e-10}
+      rotation: {x: -0.0000019071001, y: -0.00000003079642, z: 0.016146194, w: 0.99986964}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Shoulder
+      parentName: Spine
+      position: {x: -0.23528072, y: 0.000000036358834, z: 0}
+      rotation: {x: -0.000000089329774, y: 9.662736e-10, z: -0.01697304, w: 0.999856}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999998}
+    - name: R-upperarm
+      parentName: Shoulder
+      position: {x: -0.054681394, y: 0.23058918, z: -0.0000004577637}
+      rotation: {x: 0.5025443, y: -0.49744272, z: 0.51568455, w: -0.48380738}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: R-lowerarm
+      parentName: R-upperarm
+      position: {x: -0.21713826, y: -5.9604643e-10, z: 0.000000076293944}
+      rotation: {x: -0.000000008682419, y: 0.00000023826047, z: 0.03714863, w: 0.9993098}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: R-hand
+      parentName: R-lowerarm
+      position: {x: -0.21509369, y: 0.0000000023841857, z: -0.000000076293944}
+      rotation: {x: 5.820767e-11, y: 4.8822987e-18, z: 0.00000008387725, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Cyborg Ninja Gun
+      parentName: R-hand
+      position: {x: -0.28186107, y: -0.16530365, z: 0.051362608}
+      rotation: {x: 0.00000007078052, y: 0.0000000037252887, z: -0.000000009433277, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 0.9999999}
+    - name: R-finger01
+      parentName: R-hand
+      position: {x: -0.13136779, y: 0.00512417, z: -0.020507736}
+      rotation: {x: 0.99971974, y: -0.0012584128, z: 0.023626719, w: 0.00085254916}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1.0000001}
+    - name: R-finger02
+      parentName: R-finger01
+      position: {x: -0.047795106, y: -0.0000000047683715, z: 0}
+      rotation: {x: 0.00013871084, y: -0.007196786, z: 0.019269919, w: 0.9997884}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: R-thumb01
+      parentName: R-hand
+      position: {x: -0.09395744, y: -0.072826035, z: -0.01697029}
+      rotation: {x: 0.92219675, y: 0.3198212, z: 0.024978597, w: 0.21597143}
+      scale: {x: 0.9999998, y: 0.9999996, z: 1.0000001}
+    - name: R-thumb02
+      parentName: R-thumb01
+      position: {x: -0.0384951, y: 0.000000038146972, z: 0}
+      rotation: {x: -0.18755375, y: -0.07209664, z: 0.12817034, w: 0.97118384}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Shoulder
+      position: {x: -0.15999535, y: 0.0000000011920929, z: 0.000000016829054}
+      rotation: {x: 8.326673e-17, y: -1.7763568e-15, z: 1.4791143e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L-upperarm
+      parentName: Shoulder
+      position: {x: -0.041523132, y: -0.23969698, z: 0.00000061035155}
+      rotation: {x: 0.48936427, y: 0.5104145, z: 0.52232605, w: 0.4766291}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: L-lowerarm
+      parentName: L-upperarm
+      position: {x: -0.20399117, y: 0.000000076293944, z: 0}
+      rotation: {x: -7.60811e-11, y: -0.00000000558772, z: -0.024028905, w: 0.9997113}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: L-hand
+      parentName: L-lowerarm
+      position: {x: -0.21490322, y: 0.0000005328655, z: 0}
+      rotation: {x: 0, y: -0, z: -4.3655746e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L-finger01
+      parentName: L-hand
+      position: {x: -0.13161758, y: -0.00375597, z: -0.028252257}
+      rotation: {x: 0.9997317, y: 0.00090639805, z: 0.023143066, w: -0.00034748987}
+      scale: {x: 0.99999994, y: 0.9999996, z: 1.0000002}
+    - name: L-finger02
+      parentName: L-finger01
+      position: {x: -0.046713866, y: -0.00000017762184, z: 0}
+      rotation: {x: 0.0000021628277, y: 0.0001025249, z: 0.0021591168, w: 0.9999977}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: L-thumb01
+      parentName: L-hand
+      position: {x: -0.09384964, y: 0.07186603, z: -0.010846023}
+      rotation: {x: 0.91831326, y: -0.39107493, z: 0.056608614, w: 0.023592697}
+      scale: {x: 0.99999994, y: 0.9999995, z: 1.0000002}
+    - name: L-thumb02
+      parentName: L-thumb01
+      position: {x: -0.039949417, y: 0, z: 0}
+      rotation: {x: -0.026991807, y: -0.055561136, z: -0.21138816, w: 0.97544837}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: L-thigh
+      parentName: Pelvis
+      position: {x: -0.03112255, y: -0.1509834, z: -0.004315987}
+      rotation: {x: -0.013685132, y: 0.7069767, z: 0.7070982, w: 0.0029726662}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000001}
+    - name: L-knee
+      parentName: L-thigh
+      position: {x: -0.20157693, y: -0.000000020861625, z: 0.000000019073486}
+      rotation: {x: 3.5470907e-10, y: -0.000000039332296, z: 0.009003042, w: 0.99995947}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: L-foot
+      parentName: L-knee
+      position: {x: -0.17205586, y: -0.000000029653311, z: 0.000000009536743}
+      rotation: {x: -0.000000014948476, y: -0.000000015162003, z: -0.7020747, w: 0.7121033}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: R-HandControl
+      parentName: Assault Troop(Clone)
+      position: {x: 0.6603102, y: 0.74630165, z: 0.00000018806195}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L-HandControl
+      parentName: Assault Troop(Clone)
+      position: {x: -0.65990525, y: 0.73895514, z: -0.000000004155613}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R-LegControl
+      parentName: Assault Troop(Clone)
+      position: {x: 0.1479785, y: 0.05017681, z: 0.0013863775}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L-LegControl
+      parentName: Assault Troop(Clone)
+      position: {x: -0.15049447, y: 0.05017681, z: 0.0013863706}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cyborg Ninja
+      parentName: Assault Troop(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

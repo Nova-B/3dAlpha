@@ -37,6 +37,7 @@ public class LivingEntity : MonoBehaviour, IDamageble
 
     public virtual void Die()
     {
+        if (dead) return;
         if(onDeath != null)
         {
             onDeath();

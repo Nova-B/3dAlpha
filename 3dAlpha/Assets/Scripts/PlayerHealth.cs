@@ -38,9 +38,18 @@ public class PlayerHealth : LivingEntity
         gameObject.GetComponent<PlayerShooter>().enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+        {
+            float damage = 0;
+            if (other.gameObject.GetComponent<Bullet>() != null)
+            {
+                damage = other.gameObject.GetComponent<Bullet>().damage;
+            }
+            //Debug.Log("Damage" + playerShooter.ThrowGunInfo(playerShooter.curWeaponId).damage);
+            OnDamage(damage, transform.position, transform.forward);
+            Destroy(other.gameObject);
+        }
     }
 }

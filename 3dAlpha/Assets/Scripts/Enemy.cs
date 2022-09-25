@@ -31,6 +31,7 @@ public class Enemy : LivingEntity, IDamageble
     NavMeshAgent nav;
 
     public AnimationClip attack;
+    public AnimationClip reload;
     float attackAnimTime;
     public GameObject isTargetingImageObj;
     public static Transform targetPlayer;
@@ -53,6 +54,19 @@ public class Enemy : LivingEntity, IDamageble
     [SerializeField] Rigidbody[] ragRigid;
     [SerializeField] Collider[] ragCol;
 
+    [Header("Gun Enemy")]
+    [SerializeField] Transform firePos;
+    [SerializeField] GameObject bullet;
+    [SerializeField] int leftAmmo;
+    [SerializeField] int fullAmmo;
+    [SerializeField] float damage;
+    float reloadAnimTime;
+
+    private void Awake()
+    {
+        enemyCount = 0;
+    }
+
     private void Start()
     {
         enemyCount += 1;
@@ -69,6 +83,7 @@ public class Enemy : LivingEntity, IDamageble
         animator = GetComponent<Animator>();
         enemy_fov = GetComponent<FieldOfView>();
         attackAnimTime = attack.length;
+        reloadAnimTime = reload.length;
 
         //ragdoll
         ragRigid = transform.GetComponentsInChildren<Rigidbody>();
@@ -149,13 +164,13 @@ public class Enemy : LivingEntity, IDamageble
 
     IEnumerator DelayAnimTrigger(float delay, string triggerName)
     {
-        Debug.Log("Die");
         yield return new WaitForSeconds(delay);
         animator.SetTrigger(triggerName);
     }
 
     private void Update()
     {
+        Debug.Log(enemyCount);
         if(!playerShooter.gameObject.GetComponent<PlayerHealth>().dead)
         {
             ElapseTime();
@@ -260,15 +275,30 @@ public class Enemy : LivingEntity, IDamageble
         if (dead) return;
         isNormalAciton = false;
         speed = chaseSpeed;
+        
+        if(kind == Kind.kinfe)
+        {
+            KnifeEnemyAttack();
+        }
+        else if(kind == Kind.gun)
+        {
+            GunEnemyAttack();
+        }
+
+        animator.SetBool("Walking", isRun);
+    }
+
+    void KnifeEnemyAttack()
+    {
         if (targetPlayer != null && nav != null)
         {
             nav.SetDestination(targetPlayer.position);
-            if(Vector3.Distance(targetPlayer.position, transform.position) < 1.5f)
+            if (Vector3.Distance(targetPlayer.position, transform.position) < 1.5f)
             {
                 animator.speed = 0.7f;
                 isRun = false;
                 currentTime += Time.deltaTime;
-                if(currentTime > attackAnimTime + 1f && !dead)
+                if (currentTime > attackAnimTime + 1f && !dead)
                 {
                     currentTime = 0;
                     animator.SetTrigger("Attack");
@@ -284,10 +314,57 @@ public class Enemy : LivingEntity, IDamageble
                 isRun = true;
             }
         }
-        animator.SetBool("Walking", isRun);
     }
 
+    void GunEnemyAttack()
+    {
+        if (targetPlayer != null && nav != null)
+        {
+            nav.SetDestination(targetPlayer.position);
+            if (Vector3.Distance(targetPlayer.position, transform.position) < nav.stoppingDistance)
+            {
+                transform.LookAt(targetPlayer.position);
 
+                animator.speed = 1f;
+                isRun = false;
+                currentTime += Time.deltaTime;
+                if (currentTime > attackAnimTime + 1f && !dead)
+                {
+                    attackAnimTime = attack.length;
+                    currentTime = 0;
+                    animator.SetTrigger("Attack");
+                    Shot();
+                }
+            }
+            else
+            {
+                animator.speed = 1.5f;
+                isRun = true;
+            }
+        }
+    }
+
+    void Shot()
+    {
+        leftAmmo--;
+        if(leftAmmo < 0)
+        {
+            Debug.Log("?");
+            attackAnimTime = reload.length;
+            currentTime = 0;
+            leftAmmo = fullAmmo;
+            animator.SetTrigger("Reload");
+            return;
+        }
+        GameObject bulletInst = Instantiate(bullet, firePos.position, Quaternion.identity);
+        Vector3 targetPos = targetPlayer.position;
+        targetPos.y = firePos.position.y;
+        bulletInst.AddComponent<Rigidbody>();
+        bulletInst.GetComponent<Rigidbody>().useGravity = false;
+        bulletInst.GetComponent<Bullet>().damage = damage;
+        bulletInst.GetComponent<Rigidbody>().velocity = (targetPos - firePos.position).normalized * 10;
+
+    }
     #endregion
 
     private void OnTriggerEnter(Collider other)

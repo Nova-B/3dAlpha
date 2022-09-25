@@ -115,6 +115,6 @@ public class UpperPanel : MonoBehaviour
     {
         EquipWeaponData.instance.Save(guns);
         //DataManager.instance.Save(guns);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }

@@ -49,6 +49,10 @@ public class Enemy : LivingEntity, IDamageble
     bool isRun;
     float currentTime;
 
+    [Header("Ragdoll")]
+    [SerializeField] Rigidbody[] ragRigid;
+    [SerializeField] Collider[] ragCol;
+
     private void Start()
     {
         enemyCount += 1;
@@ -65,14 +69,52 @@ public class Enemy : LivingEntity, IDamageble
         animator = GetComponent<Animator>();
         enemy_fov = GetComponent<FieldOfView>();
         attackAnimTime = attack.length;
+
+        //ragdoll
+        ragRigid = transform.GetComponentsInChildren<Rigidbody>();
+        ragCol = transform.GetComponentsInChildren<Collider>();
+        RagdollOff();
+    }
+
+    void RagdollOff()
+    {
+        animator.enabled = true;
+        nav.enabled = true;
+        foreach(Rigidbody rb in ragRigid)
+        {
+            if (rb.gameObject.name == gameObject.name) continue;//본인 말고 자식만 활성화
+            rb.isKinematic = true;
+        }
+        foreach(Collider col in ragCol)
+        {
+            if (col.gameObject.name == gameObject.name) continue;
+            col.enabled = false;
+        }
+    }
+
+    void RagdolOn()
+    {
+        animator.enabled = false;
+        nav.enabled = false;
+        foreach (Rigidbody rb in ragRigid)
+        {
+            if (rb.gameObject.name == gameObject.name) continue;
+            rb.isKinematic = false;
+        }
+        foreach (Collider col in ragCol)
+        {
+            if (col.gameObject.name == gameObject.name) continue;
+            col.enabled = true;
+        }
     }
 
     void WhenDeath()
     {
+        onDeath += RagdolOn;
         onDeath += () => isTargetingImageObj.SetActive(false);//타켓될 때 뜨는 이미지 없애기
         onDeath += () => GetComponent<BoxCollider>().enabled = false;//죽은뒤 총알 통과를 위해
         onDeath += () => enemyCount -= 1;//스테이지 적 수 카운팅
-        onDeath += () => Destroy(gameObject, 2f);//적 삭제
+        //onDeath += () => Destroy(gameObject, 2f);//적 삭제
         
     }
 

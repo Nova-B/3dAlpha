@@ -157,7 +157,6 @@ public class PlayerShooter : MonoBehaviour
 
     IEnumerator ShotAnim(float delay, Vector3 enemyVec)
     {
-        Debug.Log("shot");
         animator.SetTrigger("Shot");
         //yield return new WaitForSeconds(0.3f);
         gun.Shot(enemyVec);

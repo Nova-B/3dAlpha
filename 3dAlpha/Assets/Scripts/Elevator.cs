@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Cinemachine;
 using DG.Tweening;
 
@@ -55,6 +56,7 @@ public class Elevator : MonoBehaviour
         {
             transform.DOMoveY(12, 4f).SetEase(Ease.InOutSine);
             SoundManager.instance.EndEleLiftUpSound();
+            //Invoke(, 3f);
         }
     }
 
@@ -76,6 +78,12 @@ public class Elevator : MonoBehaviour
                 doorCollider.SetActive(false);
             }
         }
+    }
+
+    void BlackOut()
+    {
+
+        //SceneManager.LoadScene(SceneManager.sceneCount + 1);
     }
 
     private void Update()

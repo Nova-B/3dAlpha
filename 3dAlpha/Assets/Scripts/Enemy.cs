@@ -83,7 +83,10 @@ public class Enemy : LivingEntity, IDamageble
         animator = GetComponent<Animator>();
         enemy_fov = GetComponent<FieldOfView>();
         attackAnimTime = attack.length;
-        reloadAnimTime = reload.length;
+        if(reload != null)
+        {
+            reloadAnimTime = reload.length;
+        }
 
         //ragdoll
         ragRigid = transform.GetComponentsInChildren<Rigidbody>();
@@ -111,6 +114,7 @@ public class Enemy : LivingEntity, IDamageble
     {
         animator.enabled = false;
         nav.enabled = false;
+        rigid.AddForce(Vector3.up * 3, ForceMode.Impulse);
         foreach (Rigidbody rb in ragRigid)
         {
             if (rb.gameObject.name == gameObject.name) continue;
@@ -129,6 +133,7 @@ public class Enemy : LivingEntity, IDamageble
         onDeath += () => isTargetingImageObj.SetActive(false);//타켓될 때 뜨는 이미지 없애기
         onDeath += () => GetComponent<BoxCollider>().enabled = false;//죽은뒤 총알 통과를 위해
         onDeath += () => enemyCount -= 1;//스테이지 적 수 카운팅
+        onDeath += () => hpSlider.transform.parent.gameObject.SetActive(false);
         //onDeath += () => Destroy(gameObject, 2f);//적 삭제
         
     }
@@ -137,6 +142,7 @@ public class Enemy : LivingEntity, IDamageble
     {
         base.OnEnable();
         hpSlider = GetComponentInChildren<Slider>();
+        Debug.Log(hpSlider.gameObject.name);
         hpText = GetComponentInChildren<TextMeshProUGUI>();
         playerShooter = FindObjectOfType<PlayerShooter>();
     }
@@ -170,7 +176,6 @@ public class Enemy : LivingEntity, IDamageble
 
     private void Update()
     {
-        Debug.Log(enemyCount);
         if(!playerShooter.gameObject.GetComponent<PlayerHealth>().dead)
         {
             ElapseTime();

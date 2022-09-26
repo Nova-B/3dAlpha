@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 using DG.Tweening;
@@ -11,12 +12,17 @@ public class Elevator : MonoBehaviour
     [SerializeField] Kind kindElvator;
     GameObject doorCollider;
     [SerializeField] CinemachineVirtualCamera cam;
+    [SerializeField] GameObject fade;
     
     // Start is called before the first frame update
     void Start()
     {
         MoveStartElevator();
         SettingStartEndDoor();
+        if (fade != null)
+        { 
+            fade.SetActive(false);
+        }
     }
 
     void SettingStartEndDoor()
@@ -56,7 +62,7 @@ public class Elevator : MonoBehaviour
         {
             transform.DOMoveY(12, 4f).SetEase(Ease.InOutSine);
             SoundManager.instance.EndEleLiftUpSound();
-            //Invoke(, 3f);
+            StartCoroutine(FadeOut(50f));
         }
     }
 
@@ -80,10 +86,21 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    void BlackOut()
+    IEnumerator FadeOut(float animTime)
     {
+        yield return new WaitForSeconds(1f);
+        float time = 0;
+        fade.SetActive(true);
+        Color alpha = fade.GetComponent<Image>().color;
+        while(time >= 1)
+        {
+            time += Time.deltaTime / animTime;
 
-        //SceneManager.LoadScene(SceneManager.sceneCount + 1);
+            alpha.a = Mathf.Lerp(0, 1, time);
+            fade.GetComponent<Image>().color = alpha;
+        }
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(SceneManager.sceneCount + 1);
     }
 
     private void Update()

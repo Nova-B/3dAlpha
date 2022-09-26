@@ -354,7 +354,6 @@ public class Enemy : LivingEntity, IDamageble
         leftAmmo--;
         if(leftAmmo < 0)
         {
-            Debug.Log("?");
             attackAnimTime = reload.length;
             currentTime = 0;
             leftAmmo = fullAmmo;

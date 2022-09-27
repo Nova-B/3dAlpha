@@ -97,17 +97,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a704dff140278d64d951cb65b37e48c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _kind: 0
+  _kind: 1
   fireTransform: {fileID: 6015858269610030488}
   gunImg: {fileID: 21300000, guid: 379b19f60f5d8e64c86a0bf448205963, type: 3}
   damage: 25
-  fireDistance: 50
+  fireDistance: 10
   remainAmmo: 100
-  ammoCapacity: 8
-  curAmmo: 8
+  ammoCapacity: 12
+  curAmmo: 12
   bullet: {fileID: 6673498730897222122, guid: 2d68a02ca2afac8428c6c7a1d1950d71, type: 3}
-  reloadTime: 1.8
-  fireInterval: 0.12
+  reloadTime: 6
+  fireInterval: 1.2
   muzzleObj: {fileID: 6511151043595455793}
 --- !u!1 &4156948085211021816
 GameObject:

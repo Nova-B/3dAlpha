@@ -132,13 +132,13 @@ MonoBehaviour:
   _kind: 0
   fireTransform: {fileID: 8497250270353371409}
   gunImg: {fileID: 21300000, guid: 90b2dc383efcb8e4dbc222496ec36863, type: 3}
-  damage: 25
-  fireDistance: 8
+  damage: 4
+  fireDistance: 6.8
   remainAmmo: 100
-  ammoCapacity: 8
-  curAmmo: 8
+  ammoCapacity: 18
+  curAmmo: 18
   bullet: {fileID: 6673498730897222122, guid: 3eb7b5da716f652499da9be51f9a90a9, type: 3}
-  reloadTime: 1.8
+  reloadTime: 2
   fireInterval: 0.12
   muzzleObj: {fileID: 7030118643283465226}
 --- !u!1001 &58606051031676042

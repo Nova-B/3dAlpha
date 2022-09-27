@@ -10,6 +10,7 @@ public class HaveWeaponBtn : MonoBehaviour, IPointerDownHandler
     public bool isEquip = false;
     GameObject clickPanel;
     GameObject equipBtn;
+    GameObject infoBtn;
     public Gun gun;
     public bool isOpen = false;
 
@@ -18,11 +19,16 @@ public class HaveWeaponBtn : MonoBehaviour, IPointerDownHandler
     {
         clickPanel = transform.GetChild(0).gameObject;
         equipBtn = clickPanel.transform.GetChild(0).gameObject;
+        infoBtn = clickPanel.transform.GetChild(1).gameObject;
         equipBtn.GetComponent<Button>().onClick.AddListener( () =>
              transform.parent.gameObject.GetComponent<HaveWeaponContent>().EquipWeapon(id)
         );
         equipBtn.GetComponent<Button>().onClick.AddListener(() =>
             isEquip = true
+        );
+
+        infoBtn.GetComponent<Button>().onClick.AddListener(() =>
+             transform.parent.gameObject.GetComponent<HaveWeaponContent>().InfoWeapon(id)
         );
     }
 
@@ -43,4 +49,6 @@ public class HaveWeaponBtn : MonoBehaviour, IPointerDownHandler
         clickPanel.SetActive(condition);
         //isOpen = condition;
     }
+
+
 }

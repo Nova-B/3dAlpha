@@ -136,10 +136,10 @@ MonoBehaviour:
   fireDistance: 8
   remainAmmo: 100
   ammoCapacity: 12
-  curAmmo: 0
+  curAmmo: 12
   bullet: {fileID: 6673498730897222122, guid: be4c5c87a8eca504990b1bb7b7860923, type: 3}
   reloadTime: 1.8
-  fireInterval: 0.12
+  fireInterval: 0.2
   muzzleObj: {fileID: 2801374573342657061}
 --- !u!1001 &2801374573342690445
 PrefabInstance:

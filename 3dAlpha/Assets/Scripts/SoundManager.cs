@@ -24,6 +24,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip weaonBtnClickClip;
     [SerializeField] AudioClip deWeaonBtnClickClip;
     [SerializeField] AudioClip openUIClickClip;
+    [SerializeField] AudioClip btnClickClip;
 
     [Header("Elevator")]
     [SerializeField] AudioClip startEleLiftUpClip;
@@ -154,5 +155,10 @@ public class SoundManager : MonoBehaviour
     public void EndEleLiftUpSound()
     {
         SFXPlay("End LiftUp", endEleLiftUpClip);
+    }
+
+    public void BtnClickSound()
+    {
+        SFXPlay("BtnClick", btnClickClip);
     }
 }

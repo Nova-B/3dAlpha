@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
+using UnityEngine.EventSystems;
 
 
-public class UpperPanel : MonoBehaviour
+public class UpperPanel : MonoBehaviour, IDragHandler
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject player_rHand;
@@ -30,10 +31,15 @@ public class UpperPanel : MonoBehaviour
 
     private void Update()
     {
-        PlayerRotation();
+        //PlayerRotation();
     }
 
     #region Player
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        PlayerRotation();
+    }
     void PlayerRotation()
     {
         if (Input.touchCount == 1)//Rotation

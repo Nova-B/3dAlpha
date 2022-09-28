@@ -80,7 +80,7 @@ public class HaveWeaponContent : MonoBehaviour
     void InfoPanelAnim()
     {
         Sequence infoPanelSeq = DOTween.Sequence();
-
+        StartCoroutine(InfoPanelAnimSound());
         infoPanelSeq.Append(gunInfoPanel.transform.DOScale(Vector3.one * 1.5f, 1f).SetEase(Ease.OutBack))
             .Append(gunInfoPanel.transform.GetChild(2).transform.DOScale(Vector3.one * 1f, 0.2f).SetEase(Ease.OutBack))
             .Append(gunInfoPanel.transform.GetChild(3).transform.DOScale(Vector3.one * 0.7f, 0.2f).SetEase(Ease.OutBack))
@@ -98,6 +98,20 @@ public class HaveWeaponContent : MonoBehaviour
             .Append(gunInfoPanel.transform.GetChild(15).transform.DOScale(Vector3.one * 0.7f, 0.2f).SetEase(Ease.OutBack))
             .Append(gunInfoPanel.transform.GetChild(16).transform.DOScale(Vector3.one * 1f, 0.1f).SetEase(Ease.OutBack))
             .Append(gunInfoPanel.transform.GetChild(17).transform.DOScale(Vector3.one * 1f, 0.1f).SetEase(Ease.OutBack));
+    }
+
+    IEnumerator InfoPanelAnimSound()
+    {
+        yield return new WaitForSeconds(1f);
+        SoundManager.instance.WhickSound();
+        yield return new WaitForSeconds(0.4f);
+        SoundManager.instance.WhickSound();
+        yield return new WaitForSeconds(0.4f);
+        SoundManager.instance.WhickSound();
+        yield return new WaitForSeconds(0.4f);
+        SoundManager.instance.WhickSound();
+        yield return new WaitForSeconds(0.4f);
+        SoundManager.instance.WhickSound();
     }
 
     void ClickInfoBtn(int id)

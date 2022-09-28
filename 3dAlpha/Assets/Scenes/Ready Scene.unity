@@ -408,6 +408,10 @@ PrefabInstance:
       value: SoundManager
       objectReference: {fileID: 0}
     - target: {fileID: 3132643358749316133, guid: 0dce97eb81d43d4418cfcef1183ea1ba, type: 3}
+      propertyPath: whickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c6d60128e109fe2408dd54401a252e66, type: 3}
+    - target: {fileID: 3132643358749316133, guid: 0dce97eb81d43d4418cfcef1183ea1ba, type: 3}
       propertyPath: btnClickClip
       value: 
       objectReference: {fileID: 8300000, guid: 6f1614f62ec93aa4c9c0a6c59956e166, type: 3}

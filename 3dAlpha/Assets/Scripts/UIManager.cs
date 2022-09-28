@@ -12,8 +12,8 @@ public class UIManager : MonoBehaviour
 {
     public GameObject[] Weapons;
     public int curWeaponId = -1;
-    float weaponTouchTimer = 0f;
-    float weaponMinTouchTimeforReload = 1.5f;
+    //float weaponTouchTimer = 0f;
+    //float weaponMinTouchTimeforReload = 1.5f;
 
     public Action<int> itemSet;
     public Func<int, Gun> getGunInfo;

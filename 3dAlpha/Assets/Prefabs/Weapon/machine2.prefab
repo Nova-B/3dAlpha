@@ -139,7 +139,7 @@ MonoBehaviour:
   curAmmo: 15
   bullet: {fileID: 6673498730897222122, guid: 01157c645a4f56a4fbbb93b7afd0618e, type: 3}
   reloadTime: 1.8
-  fireInterval: 1.5
+  fireInterval: 0.2
   muzzleObj: {fileID: 6445198070414672414}
 --- !u!1001 &6445198070414574774
 PrefabInstance:

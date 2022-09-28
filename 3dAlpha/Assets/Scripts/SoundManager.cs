@@ -30,6 +30,9 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip startEleLiftUpClip;
     [SerializeField] AudioClip endEleLiftUpClip;
 
+    [Header("Effect")]
+    [SerializeField] AudioClip whickClip;
+
 
 
     private void Awake()    //ΩÃ±€≈Ê
@@ -160,5 +163,11 @@ public class SoundManager : MonoBehaviour
     public void BtnClickSound()
     {
         SFXPlay("BtnClick", btnClickClip);
+    }
+
+    public void WhickSound()
+    {
+        SFXPlay("Whick", whickClip);
+
     }
 }

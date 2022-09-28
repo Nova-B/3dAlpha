@@ -30415,6 +30415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5673227021279506759}
+  - component: {fileID: 6286056896320785635}
   m_Layer: 0
   m_Name: MapBase3
   m_TagString: Untagged
@@ -30438,6 +30439,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6286056896320785635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224626112285175559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 26.12, y: 2, z: 43.3}
+  m_Center: {x: -16.77, y: 0, z: 17.4}
 --- !u!1001 &4170687383522665
 PrefabInstance:
   m_ObjectHideFlags: 0

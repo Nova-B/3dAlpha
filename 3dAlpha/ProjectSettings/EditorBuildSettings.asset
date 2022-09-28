@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TPS 1.unity
     guid: 6ae9b7ea0f897974a9905da581103630
+  - enabled: 1
+    path: Assets/Scenes/TPS 2.unity
+    guid: 31569ed752ca65745abdd7f847c5d0b7
   m_configObjects: {}

@@ -1779,7 +1779,7 @@ MonoBehaviour:
   startHealth: 100
   kind: 1
   attack: {fileID: 7400000, guid: 32bacd17c736a25499e5fd8c37b7e184, type: 3}
-  relaod: {fileID: 7400000, guid: d6cece2fa022c07428fe9842aa276f3f, type: 3}
+  reload: {fileID: 7400000, guid: d6cece2fa022c07428fe9842aa276f3f, type: 3}
   isTargetingImageObj: {fileID: 4420126090122652597}
   waitTime: 2
   walkTime: 2
@@ -1792,6 +1792,7 @@ MonoBehaviour:
   bullet: {fileID: 6673498730897222122, guid: e467e1bc8b6cd7645aad8bd1fdbb9633, type: 3}
   leftAmmo: 3
   fullAmmo: 3
+  damage: 15
 --- !u!114 &2106585152175306967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1828,7 +1829,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 5
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

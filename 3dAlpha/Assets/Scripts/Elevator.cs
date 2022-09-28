@@ -17,6 +17,7 @@ public class Elevator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         MoveStartElevator();
         SettingStartEndDoor();
         if (fade != null)
@@ -88,19 +89,18 @@ public class Elevator : MonoBehaviour
 
     IEnumerator FadeOut(float animTime)
     {
-        yield return new WaitForSeconds(1f);
-        float time = 0;
+        /*float time = 0;
         fade.SetActive(true);
         Color alpha = fade.GetComponent<Image>().color;
-        while(time >= 1)
+        while (time >= 1)
         {
             time += Time.deltaTime / animTime;
 
             alpha.a = Mathf.Lerp(0, 1, time);
             fade.GetComponent<Image>().color = alpha;
-        }
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(SceneManager.sceneCount + 1);
+        }*/
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void Update()

@@ -380,9 +380,19 @@ public class Enemy : LivingEntity, IDamageble
             {
                 damage = other.gameObject.GetComponent<Bullet>().damage;
             }
+            nav.enabled = false;
+            rigid.isKinematic = false;
+            rigid.AddForce(other.GetComponent<Rigidbody>().velocity.normalized * damage * 0.5f, ForceMode.Impulse);
+            Invoke("reverseNavmesh", 0.2f);
             //Debug.Log("Damage" + playerShooter.ThrowGunInfo(playerShooter.curWeaponId).damage);
             OnDamage(damage, transform.position, transform.forward);
             Destroy(other.gameObject);
         }
+    }
+
+    void reverseNavmesh()
+    {
+        nav.enabled = true;
+        rigid.isKinematic = true;
     }
 }

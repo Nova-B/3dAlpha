@@ -20,7 +20,12 @@ public class EquipWeaponData : MonoBehaviour
             Destroy(this);
         }
     }
-    
+
+    private void Start()
+    {
+        PlayerHealth.curHealth = 100f;
+    }
+
     public void Save(GameObject[] objs)
     {
         for(int i = 0; i < 4; i++)

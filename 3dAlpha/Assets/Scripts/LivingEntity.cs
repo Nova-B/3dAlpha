@@ -6,7 +6,7 @@ using UnityEngine;
 public class LivingEntity : MonoBehaviour, IDamageble
 {
     public float startHealth = 100f;
-    public float health { get; private set; }
+    public float health { get; protected set; }
     public bool dead { get; private set; }
     public event Action onDeath;
 

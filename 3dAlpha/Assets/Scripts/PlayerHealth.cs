@@ -10,6 +10,7 @@ public class PlayerHealth : LivingEntity
     TextMeshProUGUI hpText;
     Animator animator;
 
+    public static float curHealth;
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -22,6 +23,7 @@ public class PlayerHealth : LivingEntity
         base.OnDamage(damage, hitPoint, hitNormal);
         hpSlider.value = health;
         hpText.text = "" + health;
+        health = curHealth;
     }
     // Start is called before the first frame update
     void Start()

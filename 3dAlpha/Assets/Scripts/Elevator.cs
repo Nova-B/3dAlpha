@@ -101,6 +101,11 @@ public class Elevator : MonoBehaviour
         {
             other.GetComponent<PlayerMovement>().enabled = false;//플레이어 움직임 비활성화
             other.transform.position = transform.position - Vector3.right * (1f);
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if(playerHealth != null)
+            {
+                PlayerHealth.curHealth = playerHealth.health;
+            }
             cam.LookAt = null;
             cam.Follow = null;
             MoveEndElevator();

@@ -163,6 +163,7 @@ public class UIManager : MonoBehaviour
         SoundManager.instance.BtnClickSound();
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        PlayerHealth.curHealth = playerHealth.health;
     }
     #endregion
 

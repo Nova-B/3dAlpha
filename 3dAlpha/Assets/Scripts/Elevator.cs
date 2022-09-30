@@ -48,15 +48,6 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    /*Enumerator MoveEndElevator()
-    {
-        yield return new WaitForSeconds(0.5f);
-        if (kindElvator == Kind.end)
-        {
-            transform.DOMoveY(12, 2f).SetEase(Ease.Linear);
-        }
-    }*/
-
     void MoveEndElevator()
     {
         if (kindElvator == Kind.end)
@@ -89,18 +80,11 @@ public class Elevator : MonoBehaviour
 
     IEnumerator FadeOut(float animTime)
     {
-        /*float time = 0;
-        fade.SetActive(true);
-        Color alpha = fade.GetComponent<Image>().color;
-        while (time >= 1)
-        {
-            time += Time.deltaTime / animTime;
-
-            alpha.a = Mathf.Lerp(0, 1, time);
-            fade.GetComponent<Image>().color = alpha;
-        }*/
+        
         yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return new WaitForSeconds(0.1f);
+        UIManager.Instance.Victory();
     }
 
     private void Update()

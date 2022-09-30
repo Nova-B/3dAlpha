@@ -28,6 +28,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject deadPanel;
     PlayerHealth playerHealth;
 
+    //victory
+    [SerializeField] GameObject victoryPanel;
+
     public static UIManager Instance
     {
         get
@@ -67,6 +70,7 @@ public class UIManager : MonoBehaviour
         pauseBtn = canvas.transform.GetChild(3).gameObject;
         pausePanel = canvas.transform.GetChild(5).gameObject;
         deadPanel = canvas.transform.GetChild(6).gameObject;
+        victoryPanel = canvas.transform.GetChild(7).gameObject;
 
         pauseBtn.GetComponent<Button>().onClick.AddListener(() =>
             Pause()
@@ -159,6 +163,13 @@ public class UIManager : MonoBehaviour
         SoundManager.instance.BtnClickSound();
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+    }
+    #endregion
+
+    #region Victory
+    public void Victory()
+    {
+        victoryPanel.SetActive(true);
     }
     #endregion
 }

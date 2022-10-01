@@ -10,12 +10,15 @@ public class PlayerHealth : LivingEntity
     TextMeshProUGUI hpText;
     Animator animator;
 
-    public static float curHealth;
+    public static float curHealth = 100f;
     protected override void OnEnable()
     {
         base.OnEnable();
         hpSlider = GetComponentInChildren<Slider>();
         hpText = GetComponentInChildren<TextMeshProUGUI>();
+        health = curHealth;
+        hpSlider.value = health;
+        hpText.text = "" + health;
     }
 
     public override void OnDamage(float damage, Vector3 hitPoint, Vector3 hitNormal)
@@ -23,13 +26,17 @@ public class PlayerHealth : LivingEntity
         base.OnDamage(damage, hitPoint, hitNormal);
         hpSlider.value = health;
         hpText.text = "" + health;
-        health = curHealth;
     }
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         onDeath += () => WhenDead();
+    }
+
+    private void Update()
+    {
+        Debug.Log(health);
     }
 
     void WhenDead()

@@ -17,7 +17,6 @@ public class Elevator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         MoveStartElevator();
         SettingStartEndDoor();
         if (fade != null)
@@ -105,6 +104,7 @@ public class Elevator : MonoBehaviour
             if(playerHealth != null)
             {
                 PlayerHealth.curHealth = playerHealth.health;
+                Debug.Log(PlayerHealth.curHealth);
             }
             cam.LookAt = null;
             cam.Follow = null;

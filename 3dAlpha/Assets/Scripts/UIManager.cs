@@ -58,6 +58,7 @@ public class UIManager : MonoBehaviour
         startAmmoSetUp();
         playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
         playerHealth.onDeath += () => deadPanel.SetActive(true);
+        playerHealth.onDeath += () => SoundManager.instance.MissionFailSound();
         pausePanel.SetActive(false);
     }
 
@@ -163,13 +164,14 @@ public class UIManager : MonoBehaviour
         SoundManager.instance.BtnClickSound();
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
-        PlayerHealth.curHealth = playerHealth.health;
+        PlayerHealth.curHealth = playerHealth.startHealth;
     }
     #endregion
 
     #region Victory
     public void Victory()
     {
+        SoundManager.instance.MissionClearSound();
         victoryPanel.SetActive(true);
     }
     #endregion

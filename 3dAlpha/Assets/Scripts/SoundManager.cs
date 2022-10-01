@@ -33,7 +33,9 @@ public class SoundManager : MonoBehaviour
     [Header("Effect")]
     [SerializeField] AudioClip whickClip;
 
-
+    [Header("Effect")]
+    [SerializeField] AudioClip missionClear;
+    [SerializeField] AudioClip missionFail;
 
     private void Awake()    //ΩÃ±€≈Ê
     {
@@ -169,5 +171,15 @@ public class SoundManager : MonoBehaviour
     {
         SFXPlay("Whick", whickClip);
 
+    }
+
+    public void MissionClearSound()
+    {
+        SFXPlay("MissionClear", missionClear);
+    }
+
+    public void MissionFailSound()
+    {
+        SFXPlay("MissionFail", missionFail);
     }
 }

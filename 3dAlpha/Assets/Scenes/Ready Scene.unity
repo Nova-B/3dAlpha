@@ -412,9 +412,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: c6d60128e109fe2408dd54401a252e66, type: 3}
     - target: {fileID: 3132643358749316133, guid: 0dce97eb81d43d4418cfcef1183ea1ba, type: 3}
+      propertyPath: missionFail
+      value: 
+      objectReference: {fileID: 8300000, guid: d37636da5eab965408110238802aaedf, type: 3}
+    - target: {fileID: 3132643358749316133, guid: 0dce97eb81d43d4418cfcef1183ea1ba, type: 3}
+      propertyPath: missionFali
+      value: 
+      objectReference: {fileID: 8300000, guid: d37636da5eab965408110238802aaedf, type: 3}
+    - target: {fileID: 3132643358749316133, guid: 0dce97eb81d43d4418cfcef1183ea1ba, type: 3}
       propertyPath: btnClickClip
       value: 
       objectReference: {fileID: 8300000, guid: 6f1614f62ec93aa4c9c0a6c59956e166, type: 3}
+    - target: {fileID: 3132643358749316133, guid: 0dce97eb81d43d4418cfcef1183ea1ba, type: 3}
+      propertyPath: missionClear
+      value: 
+      objectReference: {fileID: 8300000, guid: d506690130a6e624e897379f15e5fc6f, type: 3}
     - target: {fileID: 3132643358749316133, guid: 0dce97eb81d43d4418cfcef1183ea1ba, type: 3}
       propertyPath: openUIClickClip
       value: 
